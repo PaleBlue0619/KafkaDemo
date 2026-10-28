@@ -21,9 +21,6 @@
             <artifactId>kafka-clients</artifactId>
             <version>${kafka.version}</version>
         </dependency>
-
-        <!-- 关掉 Kafka 客户端自带的日志，输出只剩我们自己的 System.out。
-             要排查连接问题就把这个换成 slf4j-simple -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
@@ -38,8 +35,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
             </plugin>
-
-            <!-- 用 mvn compile exec:java 直接跑，不用打包 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
